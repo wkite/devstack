@@ -757,7 +757,7 @@ source $TOP_DIR/tools/install_prereqs.sh
 
 # Configure an appropriate Python environment
 if [[ "$OFFLINE" != "True" ]]; then
-    PYPI_ALTERNATIVE_URL=${PYPI_ALTERNATIVE_URL:-""} $TOP_DIR/tools/install_pip.sh
+    sudo yum -y install python-pip #PYPI_ALTERNATIVE_URL=${PYPI_ALTERNATIVE_URL:-""} $TOP_DIR/tools/install_pip.sh
 fi
 
 # Install subunit for the subunit output stream
